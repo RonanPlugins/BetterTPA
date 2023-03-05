@@ -1,0 +1,80 @@
+name: BetterTPA
+main: me.ronanplugins.BetterTPA
+version: ${project.version}
+authors: [ RonanCraft ]
+description: A better tpa plugin
+website: https://www.ronanplugins.com/plugins
+api-version: 1.13
+
+commands:
+  tpa:
+    description: Sends a teleportation request to someone.
+    permission: bettertpa.tpa
+    aliases: [tpto, btpa]
+  tpahere:
+    description: Sends a teleport here request to someone.
+    permission: bettertpa.here
+    aliases: [tphere]
+  tpahereall:
+    description: Sends a teleport request to everyone
+    permission: bettertpa.here.all
+  back:
+    description: Teleports you to the previous location.
+    permission: bettertpa.back
+  tpatoggle:
+    description: Turns on and off the teleportation mode.
+    permission: simpletpa.toggle
+  tpaccept:
+    description: Accepts the teleportation request.
+    permission: bettertpa.accept
+    aliases: [tpaccept, tpyes, accept]
+  tpadeny:
+    description: Denies the teleportation request.
+    permission: simpletpa.deny
+    aliases: [tpdeny, tpno, deny]
+  tpacancel:
+    description: Cancels the teleportation request.
+    permission: bettertpa.cancel
+    aliases: [tpcancel, tpastop, tpstop]
+  tpareload:
+    description: Reloads the config
+    permission: bettertpa.reload
+    aliases: [tpreload, tpar, tpr, reloadtpa]
+
+permissions:
+  bettertpa.bypasscooldown:
+    default: op
+    description: Allows you to bypass the tpa cooldown
+  bettertpa.tpa:
+    description: Allows you to use /tpa command.
+    default: true
+  bettertpa.here:
+    description: Allows you to use /tpahere command.
+    default: true
+  bettertpa.here.all:
+    description: Allows you to use /tpahereall
+    default: op
+  bettertpa.accept:
+    description: Allows you to use /tpaaccept command.
+    default: true
+  bettertpa.deny:
+    description: Allows you to use /tpadeny command.
+    default: true
+  bettertpa.cancel:
+    description: Allows you to use /tpacancel command.
+    default: true
+  bettertpa.back:
+    description: Allows you to use /tpaback [player] command.
+    default: true
+  bettertpa.back.others:
+    description: Allows you to teleport other people to their previous location.
+    default: op
+  bettertpa.reload:
+    description: Allows you to use /tpareload command.
+    default: op
+  bettertpa.toggle:
+    description: Allows you to use /tpatoggle [player] command.
+    default: true
+  bettertpa.toggle.others:
+    description: Allows you to toggle others tpa
+    default: op
